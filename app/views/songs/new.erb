@@ -1,0 +1,15 @@
+<h1>Song Form</h1>
+
+<%= form_for :song do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :genre_id %>
+  <%= f.select :genre_id, @genres.map{ |g| [g.name, g.id] } %><br>
+
+  <%= f.label :artist_id %>
+  <%= f.select :artist_id, @artists.map{ |g| [g.name, g.id] } %><br>
+
+  <%= f.submit "Create Song" %>
+<% end %>
