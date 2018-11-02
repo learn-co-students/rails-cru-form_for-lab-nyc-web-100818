@@ -1,0 +1,8 @@
+<h1><%= @song.name %></h1>
+
+<p>Artist: <%= @song.artist.name %></p>
+<p>Genre: <%= @song.genre.name %></p>
+
+<a href="/songs/<%= @song.id %>/edit">Edit Song</a><br><br>
+
+<a href="/songs">Return to Songs</a>
