@@ -13,10 +13,12 @@ class ArtistsController < ApplicationController
     redirect_to @artist
   end
   def edit
-
+    @artist = Artist.find(params[:id])
   end
   def update
-
+    @artist = Artist.find(params[:id])
+    Artist.update(@artist.id, artist_params)
+    redirect_to @artist
   end
 
   private

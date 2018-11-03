@@ -1,3 +1,10 @@
+<%= link_to "new genre", new_genre_path %>
+<br>
+<%= link_to "go back", root_path %>
+<br>
+<br>
+<h1>Name:</h1>
+
 <% @genres.each do |genre| %>
 <h1>Genre:</h1>
 
@@ -6,5 +13,7 @@
 
 <br>
 <br>
+<%= link_to "view genre", genre_path(genre) %>
+<br><br>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <% end %>
