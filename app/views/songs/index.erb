@@ -1,0 +1,30 @@
+<%= link_to "new song", new_song_path %>
+<br>
+<%= link_to "go back", root_path %>
+<br><br>
+<h1>Songs:</h1>
+
+<% @songs.each do |song| %>
+<h2>Name:</h2>
+
+
+<%= song.name %>
+<h2>Artist:</h2>
+<% if song.artist != nil %>
+<%= song.artist.name %>
+<% else %>
+<%= "N/A" %>
+<% end %>
+<h2>Genre:</h2>
+<% if song.genre != nil %>
+<%= song.genre.name %>
+<% else %>
+<%= "N/A" %>
+<% end %>
+<br>
+<br>
+<%= link_to "view song", song_path(song) %>
+<br>
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<% end %>

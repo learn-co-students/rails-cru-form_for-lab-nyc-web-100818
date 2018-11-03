@@ -3,5 +3,24 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Genre.all.each do |genre|
+#   genre.destroy
+# end
+#
+# Artist.all.each do |artist|
+#   artist.destroy
+# end
+#
+# Song.all.each do |song|
+#   song.destroy
+# end
+
+# `rake db:drop
+# rake db:migrate
+# rake db:seed`
+
+10.times do
+  Genre.create({name: Faker::Music.genre})
+  Artist.create({name: Faker::Music.band, bio: Faker::ChuckNorris.fact })
+  Song.create({name: Faker::Music.album, artist_id: Faker::Number.number(1), genre_id: Faker::Number.number(1)})
+end
