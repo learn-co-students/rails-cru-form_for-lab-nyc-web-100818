@@ -1,0 +1,14 @@
+<%= link_to "add artist", new_artist_path %>
+<% @artists.each do |artist| %>
+<h1>Artist:</h1>
+
+
+<%= artist.name %>
+<h2>Bio:</h2>
+
+<%= artist.bio %>
+<br>
+<%= link_to "view artist page", artist_path(artist) %>
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<% end %>
