@@ -3,17 +3,21 @@
 #
 # Examples:
 #
-Genre.all.each do |genre|
-  genre.destroy
-end
+# Genre.all.each do |genre|
+#   genre.destroy
+# end
+#
+# Artist.all.each do |artist|
+#   artist.destroy
+# end
+#
+# Song.all.each do |song|
+#   song.destroy
+# end
 
-Artist.all.each do |artist|
-  artist.destroy
-end
-
-Song.all.each do |song|
-  song.destroy
-end
+# `rake db:drop
+# rake db:migrate
+# rake db:seed`
 
 10.times do
   Genre.create({name: Faker::Music.genre})
