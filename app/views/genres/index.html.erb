@@ -1,0 +1,6 @@
+<h1>Beats By Rails</h1>
+<%= link_to 'Create the genre', new_genre_path %><br>
+<h2>Here are some genres</h2>
+<% @genres.each do |g| %>
+ <%= link_to g.name, genre_path(g) %>
+  <% end %>
