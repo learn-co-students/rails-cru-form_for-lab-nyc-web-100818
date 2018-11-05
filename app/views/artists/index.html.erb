@@ -1,0 +1,10 @@
+<h1>Beats By Rails</h1>
+<%= link_to 'Create new artist', new_artist_path %><br>
+<h2>Here are some artists</h2>
+<ol>
+<% @artists.each do |a| %>
+<li>
+<%= link_to a.name, artist_path(a) %>
+<% end %>
+</li>
+</ol>
